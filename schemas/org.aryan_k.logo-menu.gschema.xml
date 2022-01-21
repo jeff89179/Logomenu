@@ -21,10 +21,10 @@
       <description>Change the Menu Button click type to open Activity.</description>
     </key>
 
-    <key type="s" name="menu-button-software-center">
-      <default>"gnome-software"</default>
-      <summary>Menu Button Software Center</summary>
-      <description>Change the Menu Button Software Center.</description>
+    <key type="s" name="menu-button-software-updates">
+      <default>"update-manager"</default>
+      <summary>Menu Button Software Update</summary>
+      <description>Change the Menu Button Software Updates.</description>
     </key>
 
     <key type="s" name="menu-button-terminal">
