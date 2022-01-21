@@ -249,32 +249,33 @@ var FedoraMenuPreferencesWidget = GObject.registerClass(class Fedora_Menu_Prefer
         });
 
         // Change Software Center and build it's option in prefs
-        let currentSoftwareCenter = this._settings.get_string('menu-button-software-center');
-        let changeSoftwareCenterText = new Gtk.Label({
-            label: _("Software Center"),
+        // jeff89179 updated this
+        let currentSoftwareUpdates = this._settings.get_string('menu-button-software-updates');
+        let changeSoftwareUpdatesText = new Gtk.Label({
+            label: _("Software Updates"),
             use_markup: true,
             xalign: 0,
         })
 
-        let changeSoftwareCenterInput = new Gtk.Entry({
+        let changeSoftwareUpdatesInput = new Gtk.Entry({
             halign: Gtk.Align.END,
             hexpand: true,
         });
 
-        changeSoftwareCenterInput.set_text(currentSoftwareCenter);
-        changeSoftwareCenterInput.connect('changed', () => {
-            this._settings.set_string('menu-button-software-center', changeSoftwareCenterInput.get_text());
+        changeSoftwareUpdatesInput.set_text(currentSoftwareUpdates);
+        changeSoftwareUpdatesInput.connect('changed', () => {
+            this._settings.set_string('menu-button-software-updates', changeSoftwareUpdatesInput.get_text());
         });
 
         if (shellVersion < 40){
-            menuButtonSCBox.add(changeSoftwareCenterText);
-            menuButtonSCBox.add(changeSoftwareCenterInput);
+            menuButtonSCBox.add(changeSoftwareUpdatesText);
+            menuButtonSCBox.add(changeSoftwareUpdatesInput);
             menuButtonSCFrame.add(menuButtonSCBox);
             this.add(menuButtonSCFrame);
         }
         else{
-            menuButtonSCBox.append(changeSoftwareCenterText);
-            menuButtonSCBox.append(changeSoftwareCenterInput);
+            menuButtonSCBox.append(changeSoftwareUpdatesText);
+            menuButtonSCBox.append(changeSoftwareUpdatesInput);
             menuButtonSCFrame.set_child(menuButtonSCBox);
             this.append(menuButtonSCFrame);
         }
