@@ -2,6 +2,29 @@
 
 # TO-DO
 - need to figure out how to update gschemas.compiled
+- need to figure out how to set the divider to a brighter color
+
+# Desired Layout
+- About My System
+-----
+- System Settings
+- Software Updates (update-manager)
+- Tweaks
+- Extensions
+- Terminal
+-----
+- Recent Items (?)
+-----
+- Force Quit
+-----
+- Sleep
+- Restart...
+- Shut Down...
+-----
+- Lock
+- Log Out...
+
+
 
 <img src="https://github.com/Aryan20/Logomenu/blob/main/screenshot2.png" width=410>
 
