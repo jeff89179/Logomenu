@@ -1,5 +1,7 @@
 # Logo Menu
 
+# TO-DO
+- need to figure out how to update gschemas.compiled
 
 <img src="https://github.com/Aryan20/Logomenu/blob/main/screenshot2.png" width=410>
 
