@@ -111,7 +111,7 @@ var MenuButton = GObject.registerClass(class FedoraMenu_MenuButton extends Panel
 		this.item4 = new PopupMenu.PopupMenuItem(_('Activities'))
 		this.item5 = new PopupMenu.PopupMenuItem(_('App Grid'))	
 		this.item6 = new PopupMenu.PopupSeparatorMenuItem()
-		this.item7 = new PopupMenu.PopupMenuItem(_('Software Center...'))
+		this.item7 = new PopupMenu.PopupMenuItem(_('Software Updates...'))
 		this.item8 = new PopupMenu.PopupMenuItem(_('Terminal'))
 		this.item9 = new PopupMenu.PopupMenuItem(_('Extensions'))
 		
@@ -119,7 +119,7 @@ var MenuButton = GObject.registerClass(class FedoraMenu_MenuButton extends Panel
 		this.item2.connect('activate', () => _systemPreferences())
 		this.item4.connect('activate', () => _overviewToggle())
 		this.item5.connect('activate', () => _appGrid())
-		this.item7.connect('activate', () => this.softwareStore())
+		this.item7.connect('activate', () => this.softwareUpdates())
 		this.item8.connect('activate', () => this.terminal())
 		this.item9.connect('activate', () => this.extensions())
 		
@@ -193,8 +193,8 @@ var MenuButton = GObject.registerClass(class FedoraMenu_MenuButton extends Panel
 		Util.spawn([this._settings.get_string('menu-button-terminal')])
 	}
 
-	softwareStore() {
-		Util.spawn([this._settings.get_string('menu-button-software-center')])
+	softwareUpdates() {
+		Util.spawn([this._settings.get_string('menu-button-software-updates')])
 	}
 
 	extensions() {
